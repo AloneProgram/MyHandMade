@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J8K-Kt-mwG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="T8t-MA-TyR">
+            <objects>
+                <viewController id="J8K-Kt-mwG" customClass="GPWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Wc-42-jdU"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ci-Zt-n68"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CZa-by-gjJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k65-XJ-qtG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="J8K-Kt-mwG" id="Rwu-1c-Ngb"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k65-XJ-qtG" firstAttribute="leading" secondItem="CZa-by-gjJ" secondAttribute="leadingMargin" constant="-20" id="bwh-BI-cKM"/>
+                            <constraint firstItem="0ci-Zt-n68" firstAttribute="top" secondItem="k65-XJ-qtG" secondAttribute="bottom" id="eGh-ha-KTx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k65-XJ-qtG" secondAttribute="trailing" constant="-20" id="kC9-bn-oX0"/>
+                            <constraint firstItem="k65-XJ-qtG" firstAttribute="top" secondItem="CZa-by-gjJ" secondAttribute="topMargin" id="tk6-le-Mux"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadWebView" destination="k65-XJ-qtG" id="fnT-bL-GnU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVC-rl-5Br" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="366"/>
+        </scene>
+    </scenes>
+</document>

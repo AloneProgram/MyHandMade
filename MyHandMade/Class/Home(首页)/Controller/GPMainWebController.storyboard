@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SAw-RS-5G0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Web Controller-->
+        <scene sceneID="9sv-9V-lIa">
+            <objects>
+                <viewController id="SAw-RS-5G0" customClass="GPMainWebController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hek-fE-mGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ax-Dv-C97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WKY-Bt-uzw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-FJ-VDK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-Qz-xbc">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VjH-C4-X8C"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem tag="50" title="＜＜" id="XYI-rm-ZZk">
+                                        <color key="tintColor" red="1" green="0.55455217099999998" blue="0.32327492429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="back:" destination="SAw-RS-5G0" id="P1R-Nf-qTG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThZ-zB-jKd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="o6i-DD-nII"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="标题" id="ei2-5K-UVC"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ThZ-zB-jKd" firstAttribute="top" secondItem="WKY-Bt-uzw" secondAttribute="topMargin" id="Cfs-5p-MuT"/>
+                            <constraint firstItem="VoI-FJ-VDK" firstAttribute="top" secondItem="ThZ-zB-jKd" secondAttribute="bottom" id="IjW-7W-E6R"/>
+                            <constraint firstItem="bnj-Qz-xbc" firstAttribute="top" secondItem="VoI-FJ-VDK" secondAttribute="bottom" id="R72-l6-HYe"/>
+                            <constraint firstItem="VoI-FJ-VDK" firstAttribute="leading" secondItem="WKY-Bt-uzw" secondAttribute="leadingMargin" constant="-20" id="RMf-ck-Cgy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VoI-FJ-VDK" secondAttribute="trailing" constant="-20" id="WVs-Mt-zGq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bnj-Qz-xbc" secondAttribute="trailing" constant="-20" id="bTn-wj-3cs"/>
+                            <constraint firstItem="0Ax-Dv-C97" firstAttribute="top" secondItem="bnj-Qz-xbc" secondAttribute="bottom" id="cIR-FJ-Ujk"/>
+                            <constraint firstItem="ThZ-zB-jKd" firstAttribute="leading" secondItem="WKY-Bt-uzw" secondAttribute="leadingMargin" constant="-20" id="elb-fz-kY8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ThZ-zB-jKd" secondAttribute="trailing" constant="-20" id="gAP-ui-x05"/>
+                            <constraint firstItem="bnj-Qz-xbc" firstAttribute="leading" secondItem="WKY-Bt-uzw" secondAttribute="leadingMargin" constant="-20" id="ukx-rA-2qj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemTitle" destination="ei2-5K-UVC" id="f39-tv-rLN"/>
+                        <outlet property="webView" destination="VoI-FJ-VDK" id="BLh-ai-rJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGW-7D-7hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="253"/>
+        </scene>
+    </scenes>
+</document>
